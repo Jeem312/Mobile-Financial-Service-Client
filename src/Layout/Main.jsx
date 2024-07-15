@@ -1,5 +1,5 @@
 import { Outlet, useNavigation } from "react-router-dom";
-import Navbar from "../Shared/Navbar";
+
 import FFooter from "../Shared/Footer";
 
 
@@ -8,7 +8,7 @@ import FFooter from "../Shared/Footer";
 const Main = () => {
     const navigation = useNavigation();
     return (
-        <div className="">
+        <div className="container mx-auto ">
             
            
      
