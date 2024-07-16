@@ -19,9 +19,7 @@ const Main = () => {
         <span className="loading loading-ring loading-lg"></span>
         </div> :  <Outlet></Outlet> 
        }
-          <div>
-      <FFooter></FFooter>
-          </div>
+          
         </div>
         
 

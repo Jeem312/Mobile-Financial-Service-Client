@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
+import { AuthContext } from '../AuthProvide/AuthProvide';
 
 const Navbar = () => {
+  const {user,logout} =useContext(AuthContext);
+ const userEmail = user?.email;
+
     const links = <>
     <li className="font-bold text-amber-400 "> <NavLink to="/">Home</NavLink></li>
-    <li className="font-bold text-amber-400"> <NavLink to="/userregister">Join As User</NavLink> </li>
-    <li className="font-bold text-amber-400"> <NavLink to="/agentregister">Join As Agent</NavLink> </li>
-    <li className="font-bold text-amber-400"> <NavLink to="/login">Login</NavLink> </li>
+    <li className="font-bold text-amber-400"> <NavLink to="/userregister">Registers</NavLink> </li>
+  
+        <li className="font-bold text-amber-400">
+          <NavLink to="/login">Login</NavLink>
+        </li>
+     
+   
    </>
     return (
         <div className='container mx-auto'>
